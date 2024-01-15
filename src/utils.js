@@ -48,8 +48,13 @@ export const useRedirectToStore = () => {
   useEffect(() => {
     async function handleRedirect() {
       try {
+        const text = new ClipboardItem({
+          "text/plain": new Promise((res) => {
+            res(new Blob(["HELLO ASDASDASDASD"], { type: "text/plain" }));
+          }),
+        });
         // if ("clipboard" in navigator)
-        await navigator.clipboard.writeText("HELLO FROM ZILLA");
+        navigator.clipboard.write([text]);
         // redirectTo();
       } catch (e) {
         alert(e.message);
