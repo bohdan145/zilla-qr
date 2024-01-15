@@ -54,7 +54,9 @@ export const useRedirectToStore = () => {
           }),
         });
         // if ("clipboard" in navigator)
-        navigator.clipboard.write([text]);
+        setTimeout(() => {
+          navigator.clipboard.write([text]);
+        }, 0);
         // redirectTo();
       } catch (e) {
         alert(e.message);
