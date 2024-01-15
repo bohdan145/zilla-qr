@@ -48,15 +48,7 @@ export const useRedirectToStore = () => {
   useEffect(() => {
     async function handleRedirect() {
       try {
-        const text = new ClipboardItem({
-          "text/plain": new Promise((res) => {
-            res(new Blob(["HELLO ASDASDASDASD"], { type: "text/plain" }));
-          }),
-        });
-        // if ("clipboard" in navigator)
-        setTimeout(() => {
-          navigator.clipboard.write([text]);
-        }, 0);
+        await navigator.clipboard.writeText("HELLO FROM ZILLA @@@@@@@");
         // redirectTo();
       } catch (e) {
         alert(e.message);
@@ -66,7 +58,8 @@ export const useRedirectToStore = () => {
     }
 
     setTimeout(() => {
-      handleRedirect();
+      // handleRedirect();
+      document.getElementById("btn").click();
     }, 1000);
   }, []);
 };
