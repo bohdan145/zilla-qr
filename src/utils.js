@@ -52,8 +52,9 @@ export const useRedirectToStore = () => {
         await navigator.clipboard.writeText("HELLO FROM ZILLA");
         // redirectTo();
       } catch (e) {
+        alert(e.message);
         console.log(e);
-        redirectTo();
+        // redirectTo();
       }
     }
 
