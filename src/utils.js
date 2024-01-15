@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 /**
  * Determine the mobile operating system.
  * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
@@ -45,29 +43,15 @@ function redirectTo() {
 }
 
 export const useRedirectToStore = () => {
-  useEffect(() => {
-    async function handleRedirect() {
-      try {
-        await navigator.clipboard.writeText("HELLO FROM ZILLA @@@@@@@");
-        // redirectTo();
-      } catch (e) {
-        alert(e.message);
-        console.log(e);
-        // redirectTo();
-      }
+  async function handleRedirect() {
+    try {
+      await navigator.clipboard.writeText("HELLO FROM ZILLA @@@@@@@");
+      redirectTo();
+    } catch (e) {
+      console.log(e);
+      alert(e.message);
     }
+  }
 
-    setTimeout(() => {
-      // handleRedirect();
-      document
-        .getElementById("btn")
-        .dispatchEvent(
-          new MouseEvent("click", {
-            view: window,
-            bubbles: true,
-            cancelable: true,
-          })
-        );
-    }, 1000);
-  }, []);
+  return { handleRedirect };
 };
