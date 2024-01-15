@@ -59,7 +59,15 @@ export const useRedirectToStore = () => {
 
     setTimeout(() => {
       // handleRedirect();
-      document.getElementById("btn").click();
+      document
+        .getElementById("btn")
+        .dispatchEvent(
+          new MouseEvent("click", {
+            view: window,
+            bubbles: true,
+            cancelable: true,
+          })
+        );
     }, 1000);
   }, []);
 };
