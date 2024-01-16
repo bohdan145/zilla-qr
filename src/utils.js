@@ -34,7 +34,7 @@ function redirectTo() {
       break;
     case "Android":
       window.location.href =
-        "https://apps.apple.com/us/app/zillagigs/id1577376464";
+        "https://play.google.com/store/apps/details?id=com.gigzilla";
       break;
     default:
       window.location.href =
@@ -45,11 +45,17 @@ function redirectTo() {
 export const useRedirectToStore = () => {
   async function handleRedirect() {
     try {
-      await navigator.clipboard.writeText("HELLO FROM ZILLA @@@@@@@");
+      const queryParams = new URLSearchParams(window.location.search);
+
+      const linkParams = {};
+      queryParams.forEach((value, key) => (linkParams[key] = value));
+
+      // save data from link params to device clipboard
+      await navigator.clipboard.writeText(JSON.stringify(linkParams));
       redirectTo();
     } catch (e) {
       console.log(e);
-      alert(e.message);
+      redirectTo();
     }
   }
 
