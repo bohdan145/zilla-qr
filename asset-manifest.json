@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/zilla-qr/static/css/main.f855e6bc.css",
-    "main.js": "/zilla-qr/static/js/main.cb3f66ec.js",
+    "main.css": "/zilla-qr/static/css/main.c7e71b0e.css",
+    "main.js": "/zilla-qr/static/js/main.f63ff641.js",
     "static/js/787.e660945a.chunk.js": "/zilla-qr/static/js/787.e660945a.chunk.js",
-    "static/media/logo.svg": "/zilla-qr/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/logo.png": "/zilla-qr/static/media/logo.4bf8c7582105986526df.png",
     "index.html": "/zilla-qr/index.html",
-    "main.f855e6bc.css.map": "/zilla-qr/static/css/main.f855e6bc.css.map",
-    "main.cb3f66ec.js.map": "/zilla-qr/static/js/main.cb3f66ec.js.map",
+    "main.c7e71b0e.css.map": "/zilla-qr/static/css/main.c7e71b0e.css.map",
+    "main.f63ff641.js.map": "/zilla-qr/static/js/main.f63ff641.js.map",
     "787.e660945a.chunk.js.map": "/zilla-qr/static/js/787.e660945a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.cb3f66ec.js"
+    "static/css/main.c7e71b0e.css",
+    "static/js/main.f63ff641.js"
   ]
 }
