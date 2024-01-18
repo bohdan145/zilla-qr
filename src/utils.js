@@ -24,38 +24,41 @@ function getMobileOperatingSystem() {
   return "unknown";
 }
 
-function redirectTo() {
-  const OS = getMobileOperatingSystem();
+function redirectTo(queryParams) {
+  // window.location.href = "https://zilla.page.link/referral";
+  // window.location.href = "https://zilla.page.link/referral?id=zcm1Vlddk9asd09";
+  window.location.href = `https://zilla.page.link/?link=https://zilla.page.link/referral?${queryParams}&apn=com.gigzilla&isi=1577376464&ibi=gigzilla&efr=1`;
 
-  switch (OS) {
-    case "iOS":
-      window.location.href =
-        "https://apps.apple.com/us/app/zillagigs/id1577376464";
-      break;
-    case "Android":
-      window.location.href =
-        "https://play.google.com/store/apps/details?id=com.gigzilla";
-      break;
-    default:
-      window.location.href =
-        "https://apps.apple.com/us/app/zillagigs/id1577376464";
-  }
+  // setTimeout(() => {
+  //   if (isTabActive === false) return;
+  //   switch (OS) {
+  //     case "iOS":
+  //       window.location.href =
+  //         "https://apps.apple.com/us/app/zillagigs/id1577376464";
+  //       break;
+  //     case "Android":
+  //       window.location.href =
+  //         "https://play.google.com/store/apps/details?id=com.gigzilla";
+  //       break;
+  //     default:
+  //       window.location.href =
+  //         "https://apps.apple.com/us/app/zillagigs/id1577376464";
+  //   }
+  // }, 1000);
 }
 
 export const useRedirectToStore = () => {
   async function handleRedirect() {
+    const queryParams = new URLSearchParams(window.location.search);
+    const linkParams = {};
+    queryParams.forEach((value, key) => (linkParams[key] = value));
     try {
-      const queryParams = new URLSearchParams(window.location.search);
-
-      const linkParams = {};
-      queryParams.forEach((value, key) => (linkParams[key] = value));
-
-      // save data from link params to device clipboard
+      // save data from link params to the device clipboard
       await navigator.clipboard.writeText(JSON.stringify(linkParams));
-      redirectTo();
+      redirectTo(queryParams.toString());
     } catch (e) {
       console.log(e);
-      redirectTo();
+      redirectTo(queryParams.toString());
     }
   }
 
