@@ -47,6 +47,28 @@ body, #root {
   animation: fadeInUp .4s ease-out both;
 }
 
+.fadeIn {
+  animation: fadeIn .7s linear both;
+}
+
+.arrow {
+  max-width: 100px;
+  position: absolute;
+  transform: scaleX(-1) rotate(123deg);
+  top: 10px;
+  right: 87%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
