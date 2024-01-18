@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/zilla-qr/static/css/main.c7e71b0e.css",
-    "main.js": "/zilla-qr/static/js/main.f63ff641.js",
+    "main.css": "/zilla-qr/static/css/main.da582fa0.css",
+    "main.js": "/zilla-qr/static/js/main.a48aa315.js",
     "static/js/787.e660945a.chunk.js": "/zilla-qr/static/js/787.e660945a.chunk.js",
+    "static/media/arrow.png": "/zilla-qr/static/media/arrow.63f00836642ff4880aca.png",
     "static/media/logo.png": "/zilla-qr/static/media/logo.4bf8c7582105986526df.png",
     "index.html": "/zilla-qr/index.html",
-    "main.c7e71b0e.css.map": "/zilla-qr/static/css/main.c7e71b0e.css.map",
-    "main.f63ff641.js.map": "/zilla-qr/static/js/main.f63ff641.js.map",
+    "main.da582fa0.css.map": "/zilla-qr/static/css/main.da582fa0.css.map",
+    "main.a48aa315.js.map": "/zilla-qr/static/js/main.a48aa315.js.map",
     "787.e660945a.chunk.js.map": "/zilla-qr/static/js/787.e660945a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7e71b0e.css",
-    "static/js/main.f63ff641.js"
+    "static/css/main.da582fa0.css",
+    "static/js/main.a48aa315.js"
   ]
 }
